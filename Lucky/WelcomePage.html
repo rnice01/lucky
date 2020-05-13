@@ -500,6 +500,11 @@
       
     </li>
   
+  <li class=" " data-id="/Lucky/RedirectableTurbolinksSupport" data-name="lucky::redirectableturbolinkssupport">
+      <a href="../Lucky/RedirectableTurbolinksSupport.html">RedirectableTurbolinksSupport</a>
+      
+    </li>
+  
   <li class=" " data-id="/Lucky/RemoteIpHandler" data-name="lucky::remoteiphandler">
       <a href="../Lucky/RemoteIpHandler.html">RemoteIpHandler</a>
       
@@ -1072,18 +1077,18 @@
   <h3>Instance methods inherited from module <code><a href="../Lucky/HTMLTextHelpers.html">Lucky::HTMLTextHelpers</a></code></h3>
   
   
-    <a href="../Lucky/HTMLTextHelpers.html#highlight(text:String,phrases:Array(String%7CRegex),highlighter:Proc%7CString=&quot;&lt;mark&gt;%5C%5C1&lt;/mark&gt;&quot;):Nil-instance-method" class="tooltip">
-      <span>highlight(text : String, phrases : Array(String | Regex), highlighter : Proc | String = <span class="s">&quot;&lt;mark&gt;\\1&lt;/mark&gt;&quot;</span>) : Nil<br/>highlight(text : String, phrases : Array(String | Regex), &block : String -> _) : Nil<br/>highlight(text : String, phrase : String | Regex, highlighter : Proc | String = <span class="s">&quot;&lt;mark&gt;\\1&lt;/mark&gt;&quot;</span>) : Nil<br/>highlight(text : String, phrase : String | Regex, &block : String -> _) : Nil</span>
+    <a href="../Lucky/HTMLTextHelpers.html#highlight(text:String,phrases:Array(String%7CRegex),highlighter:Proc%7CString=&quot;&lt;mark&gt;%5C%5C1&lt;/mark&gt;&quot;,escape:Bool=true):Nil-instance-method" class="tooltip">
+      <span>highlight(text : String, phrases : Array(String | Regex), highlighter : Proc | String = <span class="s">&quot;&lt;mark&gt;\\1&lt;/mark&gt;&quot;</span>, escape : Bool = <span class="n">true</span>) : Nil<br/>highlight(text : String, phrases : Array(String | Regex), escape : Bool = <span class="n">false</span>, &block : String -> _) : Nil<br/>highlight(text : String, phrase : String | Regex, highlighter : Proc | String = <span class="s">&quot;&lt;mark&gt;\\1&lt;/mark&gt;&quot;</span>, escape : Bool = <span class="n">true</span>) : Nil<br/>highlight(text : String, phrase : String | Regex, escape : Bool = <span class="n">true</span>, &block : String -> _) : Nil</span>
     highlight</a>, 
     
   
     <a href="../Lucky/HTMLTextHelpers.html#simple_format(text:String,&block:String-%3E_):Nil-instance-method" class="tooltip">
-      <span>simple_format(text : String, &block : String -> _) : Nil<br/>simple_format(text : String, **html_options) : Nil</span>
+      <span>simple_format(text : String, &block : String -> _) : Nil<br/>simple_format(text : String, escape : Bool = <span class="n">true</span>, **html_options) : Nil</span>
     simple_format</a>, 
     
   
-    <a href="../Lucky/HTMLTextHelpers.html#truncate(text:String,length:Int32=30,omission:String=&quot;...&quot;,separator:String?=nil,escape:Bool=false,blk:Proc?=nil):Nil-instance-method" class="tooltip">
-      <span>truncate(text : String, length : Int32 = <span class="n">30</span>, omission : String = <span class="s">&quot;...&quot;</span>, separator : String? = <span class="n">nil</span>, escape : Bool = <span class="n">false</span>, blk : Proc? = <span class="n">nil</span>) : Nil<br/>truncate(text : String, length : Int32 = <span class="n">30</span>, omission : String = <span class="s">&quot;...&quot;</span>, separator : String? = <span class="n">nil</span>, escape : Bool = <span class="n">true</span>, &block :  -> _) : Nil</span>
+    <a href="../Lucky/HTMLTextHelpers.html#truncate(text:String,length:Int32=30,omission:String=&quot;...&quot;,separator:String?=nil,escape:Bool=true,blk:Proc?=nil):Nil-instance-method" class="tooltip">
+      <span>truncate(text : String, length : Int32 = <span class="n">30</span>, omission : String = <span class="s">&quot;...&quot;</span>, separator : String? = <span class="n">nil</span>, escape : Bool = <span class="n">true</span>, blk : Proc? = <span class="n">nil</span>) : Nil<br/>truncate(text : String, length : Int32 = <span class="n">30</span>, omission : String = <span class="s">&quot;...&quot;</span>, separator : String? = <span class="n">nil</span>, escape : Bool = <span class="n">true</span>, &block :  -> _) : Nil</span>
     truncate</a>
     
   
@@ -1264,7 +1269,12 @@
   
     <a href="../Lucky/SelectHelpers.html#select_input(field:Avram::PermittedAttribute,**html_options,&):Nil-instance-method" class="tooltip">
       <span>select_input(field : Avram::PermittedAttribute, **html_options, &) : Nil</span>
-    select_input</a>
+    select_input</a>, 
+    
+  
+    <a href="../Lucky/SelectHelpers.html#select_prompt(label:String):Nil-instance-method" class="tooltip">
+      <span>select_prompt(label : String) : Nil</span>
+    select_prompt</a>
     
   
 
@@ -1286,44 +1296,49 @@
     checkbox</a>, 
     
   
-    <a href="../Lucky/InputHelpers.html#color_input(field:Avram::Attribute,**options)-instance-method" class="tooltip">
-      <span>color_input(field : Avram::Attribute, **options)<br/>color_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>color_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil</span>
+    <a href="../Lucky/InputHelpers.html#color_input(field:Avram::PermittedAttribute,attrs:Array(Symbol),**html_options):Nil-instance-method" class="tooltip">
+      <span>color_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil<br/>color_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>color_input(field : Avram::Attribute, **options)</span>
     color_input</a>, 
     
   
-    <a href="../Lucky/InputHelpers.html#date_input(field:Avram::Attribute,**options)-instance-method" class="tooltip">
-      <span>date_input(field : Avram::Attribute, **options)<br/>date_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>date_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil</span>
+    <a href="../Lucky/InputHelpers.html#date_input(field:Avram::PermittedAttribute,**html_options):Nil-instance-method" class="tooltip">
+      <span>date_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>date_input(field : Avram::Attribute, **options)<br/>date_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil</span>
     date_input</a>, 
     
   
     <a href="../Lucky/InputHelpers.html#datetime_input(field:Avram::Attribute,**options)-instance-method" class="tooltip">
-      <span>datetime_input(field : Avram::Attribute, **options)<br/>datetime_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>datetime_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil</span>
+      <span>datetime_input(field : Avram::Attribute, **options)<br/>datetime_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil<br/>datetime_input(field : Avram::PermittedAttribute, **html_options) : Nil</span>
     datetime_input</a>, 
     
   
-    <a href="../Lucky/InputHelpers.html#email_input(field:Avram::Attribute,**options)-instance-method" class="tooltip">
-      <span>email_input(field : Avram::Attribute, **options)<br/>email_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>email_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil</span>
+    <a href="../Lucky/InputHelpers.html#email_input(field:Avram::PermittedAttribute,attrs:Array(Symbol),**html_options):Nil-instance-method" class="tooltip">
+      <span>email_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil<br/>email_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>email_input(field : Avram::Attribute, **options)</span>
     email_input</a>, 
     
   
-    <a href="../Lucky/InputHelpers.html#file_input(field:Avram::PermittedAttribute,attrs:Array(Symbol),**html_options):Nil-instance-method" class="tooltip">
-      <span>file_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil<br/>file_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>file_input(field : Avram::Attribute, **options)</span>
+    <a href="../Lucky/InputHelpers.html#file_input(field:Avram::PermittedAttribute,**html_options):Nil-instance-method" class="tooltip">
+      <span>file_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>file_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil<br/>file_input(field : Avram::Attribute, **options)</span>
     file_input</a>, 
     
   
     <a href="../Lucky/InputHelpers.html#hidden_input(field:Avram::PermittedAttribute,attrs:Array(Symbol),**html_options):Nil-instance-method" class="tooltip">
-      <span>hidden_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil<br/>hidden_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>hidden_input(field : Avram::Attribute, **options)</span>
+      <span>hidden_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil<br/>hidden_input(field : Avram::Attribute, **options)<br/>hidden_input(field : Avram::PermittedAttribute, **html_options) : Nil</span>
     hidden_input</a>, 
     
   
-    <a href="../Lucky/InputHelpers.html#number_input(field:Avram::Attribute,**options)-instance-method" class="tooltip">
-      <span>number_input(field : Avram::Attribute, **options)<br/>number_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>number_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil</span>
+    <a href="../Lucky/InputHelpers.html#number_input(field:Avram::PermittedAttribute,**html_options):Nil-instance-method" class="tooltip">
+      <span>number_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>number_input(field : Avram::Attribute, **options)<br/>number_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil</span>
     number_input</a>, 
     
   
     <a href="../Lucky/InputHelpers.html#password_input(field:Avram::Attribute,**options)-instance-method" class="tooltip">
       <span>password_input(field : Avram::Attribute, **options)<br/>password_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>password_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil</span>
     password_input</a>, 
+    
+  
+    <a href="../Lucky/InputHelpers.html#radio(field:Avram::PermittedAttribute(String?),checked_value:String,attrs:Array(Symbol),**html_options):Nil-instance-method" class="tooltip">
+      <span>radio(field : Avram::PermittedAttribute(String?), checked_value : String, attrs : Array(Symbol), **html_options) : Nil<br/>radio(field : Avram::PermittedAttribute(String?), checked_value : String, **html_options) : Nil<br/>radio(field : Avram::Attribute, **options)</span>
+    radio</a>, 
     
   
     <a href="../Lucky/InputHelpers.html#range_input(field:Avram::PermittedAttribute,attrs:Array(Symbol),**html_options):Nil-instance-method" class="tooltip">
@@ -1341,13 +1356,13 @@
     submit</a>, 
     
   
-    <a href="../Lucky/InputHelpers.html#telephone_input(field:Avram::PermittedAttribute,attrs:Array(Symbol),**html_options):Nil-instance-method" class="tooltip">
-      <span>telephone_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil<br/>telephone_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>telephone_input(field : Avram::Attribute, **options)</span>
+    <a href="../Lucky/InputHelpers.html#telephone_input(field:Avram::Attribute,**options)-instance-method" class="tooltip">
+      <span>telephone_input(field : Avram::Attribute, **options)<br/>telephone_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>telephone_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil</span>
     telephone_input</a>, 
     
   
-    <a href="../Lucky/InputHelpers.html#text_input(field:Avram::Attribute,**options)-instance-method" class="tooltip">
-      <span>text_input(field : Avram::Attribute, **options)<br/>text_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>text_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil</span>
+    <a href="../Lucky/InputHelpers.html#text_input(field:Avram::PermittedAttribute,attrs:Array(Symbol),**html_options):Nil-instance-method" class="tooltip">
+      <span>text_input(field : Avram::PermittedAttribute, attrs : Array(Symbol), **html_options) : Nil<br/>text_input(field : Avram::PermittedAttribute, **html_options) : Nil<br/>text_input(field : Avram::Attribute, **options)</span>
     text_input</a>, 
     
   
